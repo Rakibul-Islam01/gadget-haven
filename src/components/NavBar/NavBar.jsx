@@ -1,11 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { CiHeart } from "react-icons/ci";
+import { IoCartOutline } from "react-icons/io5";
 
 const NavBar = () => {
     const navLinks = <>
-    <li><NavLink to="/">Home</NavLink></li>
-    <li><NavLink to="/statistics">Statistics</NavLink></li>
-    <li><NavLink to="/dashboard">Dashboard</NavLink></li>
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/statistics">Statistics</NavLink></li>
+        <li><NavLink to="/dashboard">Dashboard</NavLink></li>
     </>
     return (
         <div>
@@ -39,8 +41,14 @@ const NavBar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <a className="btn">Button</a>
+                <div className="navbar-end gap-4 mr-4">
+                    <span className='p-1 bg-white text-black rounded-full'>
+                        <IoCartOutline />
+                    </span>
+                    <span className='p-1 bg-white text-black rounded-full'>
+                        <CiHeart />
+                    </span>
+
                 </div>
             </div>
         </div>
